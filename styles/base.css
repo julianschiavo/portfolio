@@ -1,0 +1,153 @@
+/**
+ *  Adapted from Publish Foundation theme
+ *  Copyright (c) John Sundell 2019
+ *  MIT license, see LICENSE file for details
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: var(--primary-color);
+    background-color: var(--base-background-color);
+    font-family: "Avenir Next", "Avenir", -apple-system, -apple-system-font, system-ui, "SF Pro Display", BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    width: 96vw;
+    /* max-width: var(--content-width); */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    flex: 1;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: inherit;
+}
+
+a {
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--theme-color-adjusted);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--separator-color);
+    margin: 30px 0;
+}
+
+.table-container {
+    overflow: auto;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--separator-color);
+}
+
+table {
+    background-color: var(--elevated-background-color);
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-style: hidden;
+    width: 100%;
+}
+
+table + h1, table + h2 {
+    margin-top: 50px;
+}
+
+th, td {
+    width: 33.33%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--separator-color);
+    padding: 8px;
+    padding-right: 30px;
+}
+
+th {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.page-content th p, .page-content td p {
+    margin-bottom: 0;
+}
+
+/* Posts */
+
+.post-content, .page-content p {
+    line-height: 1.5em;
+/*    letter-spacing: -.022em;*/
+}
+
+.post-meta {
+    color: var(--secondary-color);
+}
+
+.post-link {
+    text-decoration: none;
+}
+
+.accent {
+    color: var(--theme-color);
+}
+
+.centering {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.centering div {
+    flex: 0 1 auto;
+}
+
+.largeButton {
+    background-color: #BE4FFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    min-width: 240px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+}

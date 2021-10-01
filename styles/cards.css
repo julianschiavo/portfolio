@@ -1,0 +1,572 @@
+/* Cards */
+
+.page-content .title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.page-content .subtitle {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.8em;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2vw;
+    -webkit-overflow-scrolling: touch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+/* .card-list:after {
+    display: block;
+    width: 28%;
+    content: "";
+} */
+
+.card {
+    cursor: pointer;
+    height: auto;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 49%;
+    background-color: var(--elevated-background-color);
+    border-radius: 25px;
+    box-shadow: 2px 4px 12px rgba(102, 102, 102, .12);
+    transition: all .3s cubic-bezier(0, 0, .5, 1), background-image 0s linear, background-position .7s ease-in-out;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.card:hover {
+    box-shadow: 6px 12px 36px rgba(102, 102, 102, .3);
+    transform: scale3d(1.02, 1.02, 1.02);
+    background-color: var(--elevated-selected-background-color);
+}
+
+.card.mobile {
+    display: none;
+}
+
+.card.desktop {
+    display: flex;
+}
+
+.card .content {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+}
+
+.card.large {
+    width: 100%;
+    min-height: 250px !important;
+}
+
+.card.half {
+    width: 47vw;
+}
+
+.card.third {
+    width: 30.6vw;
+}
+
+.card.fourth {
+    width: 22.5vw;
+}
+
+.card.fifth {
+    width: 18vw;
+}
+
+.card img.hero {
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+}
+
+.card img.inline {
+    max-width: 20%;
+    object-fit: contain;
+    border-radius: 18px 0 0 18px;
+}
+
+.card img.inline-padding {
+    max-width: 20%;
+    object-fit: contain;
+    border-radius: 18px 0 0 18px;
+    padding: 4%;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.image-card {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+@media(max-width: 655px) {
+    .card-list {
+        gap: 5px;
+    }
+    .title {
+        width: 90%;
+    }
+    .subtitle {
+        width: 80%;
+    }
+    .card {
+        display: block;
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        float: none;
+    }
+    .card.black {
+        padding: 0;
+    }
+    .card.mobile {
+        display: flex;
+    }
+    .card.desktop {
+        display: none;
+    }
+}
+
+/* Expanded Cards */
+
+.expanded-card {
+    display: none;
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+
+    -webkit-backdrop-filter: blur(10px);
+    /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+    backdrop-filter: blur(10px);
+    /* Supported in Chrome 76 */
+    /* transition: all 3s cubic-bezier(0, 0, .5, 1), background-image 0s linear, background-position .7s ease-in-out; */
+    transition: opacity 0.5s;
+    /* animation: popup 0.5s; */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.expanded-card.visible {
+    opacity: 1;
+}
+
+.expanded-card.displayed {
+    display: block;
+}
+
+.expanded-card .inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--elevated-background-color);
+    padding: 40px;
+    border: 1px solid var(--theme-color);
+    width: 60%;
+    border-radius: 25px;
+    min-height: 300px;
+    max-height: 90vh;
+}
+
+.expanded-card .content {
+    display: flex;
+    align-items: top;
+    gap: 30px;
+    overflow-y: auto;
+
+    width: 100%;
+    height: 100%;
+}
+
+.expanded-card p {
+    line-height: 1.6em;
+}
+
+.expanded-card p.secondary {
+    line-height: 1.8em;
+}
+
+.expanded-card .icon {
+    display: inline-block;
+    max-width: 150px;
+    margin-bottom: auto;
+}
+
+.expanded-card .icon.title {
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    filter: invert(70%) sepia(51%) saturate(3062%) hue-rotate(176deg) brightness(102%) contrast(98%);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.close:hover, .close:focus {
+    filter: invert(44%) sepia(30%) saturate(842%) hue-rotate(160deg) brightness(97%) contrast(101%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media(max-width: 655px) {
+    .expanded-card .inner {
+        width: 90%;
+        height: 90%;
+        margin: auto;
+    }
+
+    .expanded-card .content {
+        display: block;
+    }
+
+    .expanded-card .icon {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+}
+
+/* Fuze */
+
+.card.fuze {
+    background-image: url("../images/fuze-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.expanded-card#fuze-expanded .inner {
+    background-image: url("../images/fuze-background.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ClusterCards */
+
+.card.clustercards {
+    background-color: initial;
+    background-image: linear-gradient(90deg, #1a1a1a, #1a1a1a, #191919, #191919, #181818, #181818, #171717, #171717);
+}
+
+.card.clustercards:hover {
+    background-image: linear-gradient(90deg, #303030, #303030, #2f2f2f, #2f2f2f, #2f2f2f, #2f2f2f, #2e2e2e, #2e2e2e);
+}
+
+.card.clustercards .content {
+    position: relative;
+}
+
+.clustercards-bottom {
+    background-color: #EC6156;
+    border-radius: 18px;
+    box-shadow: 1px 2px rgba(0, 0, 0, .33);
+    width: 62.5%;
+    height: 70%;
+    position: absolute;
+    bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.clustercards-middle {
+    background-color: #3494C4;
+    border-radius: 20px;
+    box-shadow: 0px 2px rgba(59, 59, 59, .64);
+    width: 69%;
+    height: 60%;
+    position: absolute;
+    bottom: 18%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.clustercards-top {
+    background-color: #F9A81F;
+    border-radius: 24px;
+    box-shadow: 0px 2px rgba(255, 255, 255, .08);
+    width: 76%;
+    height: 50%;
+    position: absolute;
+    bottom: 13%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.clustercards-top p {
+    color: black;
+}
+
+.expanded-card#clustercards-expanded .inner {
+    background-image: linear-gradient(90deg, #1a1a1a, #1a1a1a, #191919, #191919, #181818, #181818, #171717, #171717);
+}
+
+@media(max-width: 655px) {
+    .clustercards-bottom {
+        border-radius: 8px;
+    }
+    .clustercards-middle {
+        border-radius: 12px;
+    }
+    .clustercards-top {
+        border-radius: 16px;
+    }
+}
+
+/* Next Bus */
+
+.card.nextbus {
+    background-color: initial;
+    background-image: linear-gradient(90deg, #991b33, #971a2d, #941828, #921822, #8f171c, #8c1716, #881710, #851809);;
+}
+
+.card.nextbus:hover {
+    background-image: linear-gradient(90deg, #cc2444, #c9223d, #c52035, #c21f2e, #be1f26, #ba1f1e, #b61f16, #b1200c);
+}
+
+.card.nextbus .content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card.nextbus img {
+    margin-left: 10px;
+}
+
+.expanded-card#nextbus-expanded .inner {
+    background-image: linear-gradient(90deg, #1e050a, #1e0508, #1d0507, #1d0406, #1c0404, #1b0403, #1b0402, #1a0401);
+}
+
+/* Launch CS */
+
+.card.launchcs {
+    background-image: url("../images/launchcs-background-dark.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 160px;
+}
+
+.card.launchcs:hover {
+    background-image: url("../images/launchcs-background.svg");
+    background-position: center;
+}
+
+.card.launchcs .content {
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    /* justify-content: center;
+    align-content: center;
+    flex-direction: row;*/
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: auto;
+    gap: 10px;
+}
+
+.card.launchcs p {
+    color: black;
+}
+
+/* WWDC */
+
+.card.wwdc {
+    background-image: url("../images/wwdc-banner-dark.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 170px;
+}
+
+.card.wwdc:hover {
+    background-image: url("../images/wwdc-banner-vibrant.jpg");
+}
+
+.expanded-card#wwdc-expanded .inner {
+    background-image: linear-gradient(90deg, #2f0f2c, #2c0f29, #290e26, #260e24, #240d21, #210c1e, #1e0b1c, #1c0919);
+}
+
+/* Silentmode */
+
+.card.silentmode {
+    background-image: url("../images/silentmode-background-dark.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card.silentmode:hover {
+    background-image: url("../images/silentmode-background-vibrant.jpg");
+}
+
+.card.silentmode .content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(1px);
+    /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+    backdrop-filter: blur(1px);
+    /* Supported in Chrome 76 */
+}
+
+.card.silentmode img {
+    margin: auto;
+    max-width: 80%;
+}
+
+.expanded-card#kids4kids-expanded .inner {
+    background-image: linear-gradient(90deg, #092225, #091f21, #091c1e, #08191a, #061617, #041213, #020e0e, #000909);
+}
+
+/* CISxIdeas */
+
+.card.cisxideas {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/cisxideas-generic_unsplash.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card.cisxideas:hover {
+    background-image: url("../images/cisxideas-generic_unsplash.jpg");
+    background-position: left bottom;
+}
+
+.card.cisxideas .content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(5px);
+    /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+    backdrop-filter: blur(5px);
+    /* Supported in Chrome 76 */
+}
+
+.expanded-card#cisxideas-expanded .inner {
+    background-image: linear-gradient(90deg, #061019, #0b0f19, #0f0d18, #120c16, #150b14, #170a12, #18090e, #19090a);
+}
+
+/* Inturio */
+
+.card.inturio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/inturio-generic_unsplash.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card.inturio:hover {
+    background-image: url("../images/inturio-generic_unsplash.jpg");
+}
+
+.card.inturio .content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(5px);
+    /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+    backdrop-filter: blur(5px);
+    /* Supported in Chrome 76 */
+}
+
+/* Inturio */
+
+.card.kids4kids {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/kids4kids-generic_unsplash.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card.kids4kids:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/kids4kids-generic_unsplash.jpg");
+    background-position: center bottom;
+}
+
+.card.kids4kids .content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(5px);
+    /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+    backdrop-filter: blur(5px);
+    /* Supported in Chrome 76 */
+}
+
+.card.kids4kids img {
+    margin: auto;
+    max-width: 80%;
+}
+
+.expanded-card#kids4kids-expanded .inner {
+    background-image: linear-gradient(90deg, #320001, #2f0101, #2b0101, #280101, #250101, #210100, #1d0000, #190000);
+}

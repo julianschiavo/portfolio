@@ -1,0 +1,133 @@
+.monospaced {
+    font-family: "SF Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Font Sizes */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
+.secondary {
+    color: var(--secondary-color);
+}
+
+.font-body {
+    font-size: 18px
+}
+
+.font-caption {
+    font-size: 16px
+}
+
+.font-footnote {
+    font-size: 17px
+}
+
+.font-subheadline {
+    font-size: 19px
+}
+
+.font-title4 {
+    font-size: 22px;
+    line-height: 1.5em;
+}
+
+.font-title3 {
+    font-size: 26px;
+    line-height: 1.5em;
+}
+
+.font-title2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.font-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.font-sectionTitle {
+    font-size: 50px;
+}
+
+.font-largeTitle {
+    font-size: 60px
+}
+
+.font-largerTitle {
+    font-size: 80px
+}
+
+@media(max-width: 655px) {
+    html, .font-base {
+        font-size: 15px
+    }
+    .font-caption {
+        font-size: 11px
+    }
+    .font-footnote {
+        font-size: 16px
+    }
+    .font-subheadline {
+        font-size: 17px
+    }
+    .font-title3, .font-title4 {
+        font-size: 18px
+    }
+    .font-title2 {
+        font-size: 20px
+    }
+    .font-title {
+        font-size: 26px
+    }
+    .font-largeTitle, .font-sectionTitle {
+        font-size: 32px
+    }
+    .font-largerTitle {
+        font-size: 40px
+    }
+}
+
+/* Font Weights */
+
+.ultraLight {
+    font-weight: 100
+}
+
+.thin {
+    font-weight: 200
+}
+
+.light {
+    font-weight: 300
+}
+
+.regular {
+    font-weight: 400/* normal */
+}
+
+.medium {
+    font-weight: 500
+}
+
+.semibold {
+    font-weight: 600
+}
+
+.bold {
+    font-weight: 700/* bold */
+}
+
+.heavy {
+    font-weight: 800
+}
+
+.black {
+    font-weight: 900
+}

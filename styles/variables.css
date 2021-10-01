@@ -1,0 +1,71 @@
+:root {
+    --spacing-unit: 20px;
+    --page-content-padding: 80px;
+    
+    --content-width: 1200px;
+    --header-content-width: 1080px;
+    --link-hover-opacity: .65;
+    
+    --base-font-weight: 400;
+    --heavy-font-weight: 600;
+    --base-line-height: 1.5;
+}
+ /*
+    
+    --link-color: #0070c9;
+    --link-visited-color: #0059a0;
+    --primary-color: #000000;
+    --secondary-color: #555555;
+    --footer-text-color: #828282;
+    --white-in-light: #ffffff;
+    --white-in-dark: #000000;
+    
+    --theme-color: #CC6C00;
+    --theme-color-adjusted: #995100;
+    --dark-theme-color: #FF8800;
+    --dark-theme-color-adjusted: #CC6C00;
+    
+    --grey-color: #828282;
+    --grey-color-light: lighten(#828282, 40%);
+    --grey-color-lighter: lighten(#828282, 45%);
+    --grey-color-dark: darken(#828282, 25%);
+    --grey-color-darker: darken(#828282, 30%);
+    
+    --separator-color: rgb(174, 174, 178);
+    --base-background-color: rgb(229, 229, 234);
+    --elevated-background-color: rgb(255, 255, 255);
+    --elevated-selected-background-color: rgb(242, 242, 247);
+    
+    --header-background-color: #2C2C2C;
+    --footer-background-color: #f2f2f2;
+}
+
+@media (prefers-color-scheme: dark) {*/
+    :root {
+        --link-color: #FE7070;
+        --link-visited-color: #b14e4e;
+        --primary-color: #dddddd;
+        --secondary-color: #b0b0b0;
+        --footer-text-color: #A7A7A7;
+        --white-in-light: #000000;
+        --white-in-dark: #ffffff;
+        
+        --theme-color: #4EB8FC;
+        --theme-color-adjusted: #3680b0;
+        
+        --grey-color: #828282;
+        --grey-color-light: darken(#828282, 25%);
+        --grey-color-lighter: darken(#828282, 30%);
+        --grey-color-dark: lighten(#828282, 40%);
+        --grey-color-darker: lighten(#828282, 45%);
+        
+        --separator-color: rgb(99, 99, 102);
+        --base-background-color: #000000;
+        --elevated-background-color: #071219;
+        --elevated-selected-background-color: #17374b;
+        
+        --header-background-color: #071219;
+        --footer-background-color: rgb(30, 16, 32);
+    }
+/*}*/
+

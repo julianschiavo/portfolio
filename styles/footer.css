@@ -1,0 +1,47 @@
+/* Header Styling */
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid var(--grey-color);
+    color: var(--footer-text-color);
+    background-color: var(--footer-background-color);
+    margin-top: 30px;
+}
+
+footer .wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    max-width: var(--header-content-width);
+}
+
+footer a {
+    color: var(--footer-text-color);
+    text-decoration: underline;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    text-align: center;
+    margin-bottom: .65em;
+}
+
+.social-icon {
+    font-size: 34px;
+    display: inline-block;
+    padding: 0 0.35em;
+}
+
+footer a:hover, .social-icon:hover {
+    color: var(--primary-color);
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+

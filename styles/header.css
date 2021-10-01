@@ -1,0 +1,115 @@
+/* Header Styling */
+
+/*
+ * RGB(255, 165, 0) is the default orange color
+ * '5' is how much percent of the header gradient will be colored
+ E.g. 2 will make the header show color on the left 50%
+ */
+.site-header {
+    text-align: center;
+/*    line-height: 1.7em;*/
+    background-color: var(--header-background-color);
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    width: 90%;
+    max-width: var(--content-width);
+}
+
+.site-header .wrapper {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 90%;
+    max-width: var(--header-content-width);
+}
+
+.site-header a {
+    text-decoration: none;
+}
+
+.site-header p {
+    margin: 0;
+}
+
+.site-header .site-name {
+    color: var(--theme-color);
+/*    line-height: 1.2em;*/
+}
+
+.site-header .site-name:hover {
+    color: var(--theme-color-adjusted);
+}
+
+.site-header .site-description {
+    display: none;
+    color: #ddd;
+}
+
+.site-header nav {
+    margin-top: 10px;
+}
+
+.site-header nav li {
+    display: inline-block;
+    margin: 0 4px 16px 4px;
+}
+
+.site-header nav li a {
+    color: var(--primary-color);
+    padding: 10px 16px;
+}
+
+.site-header nav li a:hover {
+    color: var(--secondary-color);
+}
+
+.site-header nav li a.filled {
+    color: var(--header-background-color);
+    background-color: var(--theme-color);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    /*    line-height: 34px;*/
+}
+
+.site-header nav li a.filled:hover {
+    background-color: var(--theme-color-adjusted);
+}
+
+.site-header nav li i {
+    margin-right: 3px;
+}
+
+.site-header nav li.selected a {
+    font-weight: 600;
+    color: white;
+    background-color: var(--elevated-selected-background-color);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+/* .clear {
+    clear: both;
+} */
+
+@media (min-width: 655px) {
+    .site-header {
+        text-align: center;
+    }
+    
+    .site-header .text-container {
+        margin-top: 20px;
+    }
+    
+    .site-header nav {
+        margin-top: 20px;
+    }
+    
+    .site-header .site-description {
+        display: block;
+    }
+}
+

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="og:site_name" content="Julian Schiavo's Portfolio"/>
+        <link rel="canonical" href="https://schiavo.me"/>
+        <meta name="twitter:url" content="https://schiavo.me"/>
+        <meta name="og:url" content="https://schiavo.me"/>
+        <title>Julian Schiavo</title>
+        <meta name="twitter:title" content="Julian Schiavo's Portfolio"/>
+        <meta name="og:title" content="Julian Schiavo's Portfolio"/>
+        <meta name="description" content=""/>
+        <meta name="twitter:description" content=""/>
+        <meta name="og:description" content=""/>
+        <meta name="twitter:card" content="summary"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/variables.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/base.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/fonts.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/footer.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/header.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/pages.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/cards.css" type="text/css"/>
+        <script src="scripts/cards.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
+    </head>
+    <body>
+        <div class="wrapper content">
+            <div class="page-content">
+                <p class="font-largeTitle heavy title">
+                    Julian Schiavo
+                </p>
+                <p class="font-title4 medium subtitle">
+                    Hey! I'm a 17-year-old programmer from Hong Kong interested in mobile apps and cutting edge technologies. Learn more about me through some of my featured work below, and <a href="mailto:julian@schiavo.me">feel free to reach out</a>!
+                </p>
+
+                <div class="card-list">
+                    <div class="card nextbus fourth" onclick="expandNextBusCard()">
+                        <div class="image-card">
+                            <img class="inline-padding" src="images/nextbus-bus.svg">
+                            <div class="content">
+                                <p class="font-title bold">
+                                    Next Bus
+                                </p>
+                                <p class="font-title4 secondary">
+                                    Don't miss the bus!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clustercards fourth" onclick="expandClusterCardsCard()">
+                        <div class="content">
+                            <div class="clustercards-bottom"></div>
+                            <div class="clustercards-middle"></div>
+                            <div class="clustercards-top">
+                                <p class="font-title bold">
+                                    ClusterCards
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card blog fourth" onclick="window.location.href = 'https://blog.schiavo.me'">
+                        <div class="content">
+                            <p class="font-title bold">
+                                <!-- <i class="fas fa-calendar-alt fa-fw"></i>
+                                <br> -->
+                                Blog
+                            </p>
+                            <!-- <p class="secondary">
+                                Blogging for fun about programming in Swift.
+                            </p> -->
+                        </div>
+                    </div>
+
+                    <div class="card launchcs fourth" onclick="expandLaunchCSCard()">
+                        <div class="content">
+                            <img class="inline" src="images/launchcs-rocket.svg">
+                            <p class="font-sectionTitle bold">
+                                Launch CS
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card half wwdc" onclick="expandWWDCCard()">
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card black fuze fourth" onclick="expandFuzeCard()">
+                        
+                    </div>
+
+                    <div class="card cisxideas fourth" onclick="expandCISxIdeasCard()">
+                        <div class="content">
+                            <p class="font-sectionTitle bold">
+                                CISxIdeas<br>Hackathon
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card third kids4kids" onclick="expandKids4KidsCard()">
+                        <div class="content">
+                            <img src="images/kids4kids-logo.svg">
+                        </div>
+                    </div>
+
+                    <div class="card silentmode third" onclick="expandSilentmodeCard()">
+                        <div class="content">
+                            <img src="images/silentmode-logo.svg">
+                        </div>
+                    </div>
+
+                    <div class="card inturio third" onclick="expandInturioCard()">
+                        <div class="content">
+                            <p class="font-sectionTitle bold">
+                                Inturio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expanded Card States -->
+        <div id="expanded-cards">
+            <div id="nextbus-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <img class="icon" src="images/nextbus-icon.png" style="border-radius: 20%;">
+                        <div class="text">
+                            <p class="font-sectionTitle heavy">
+                                Next Bus
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2020—
+                            </p>
+                            <p class="font-subheadline secondary">
+                                <a href="https://apps.apple.com/us/app/next-bus-hong-kong/id1480535049">View on the App Store</a>
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                Frustrated by the poor user experience provided by the existing bus schedule apps in Hong Kong, I was encouraged to create a better solution. I launched the original version of NextBus in 2020, allowing people across Hong Kong to check when their commuter bus was arriving.
+                                <br><br>
+                                In 2021, I am working on a brand new, redesigned version, called <span class="primary semibold">Next Bus 2</span>, which brings major new features including support for <span class="primary semibold">scheduled notifications</span>, <span class="primary semibold">custom homescreen widgets</span>, and automatic <span class="primary semibold">route-finding support</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="clustercards-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <img class="icon" src="images/clustercards-icon.png">
+                        <div class="text">
+                            <p class="font-sectionTitle heavy">
+                                ClusterCards
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2018—2019
+                            </p>
+                            <p class="font-subheadline secondary">
+                                <a href="https://apps.apple.com/us/app/cards-business-card-scanner/id1386551125">View on the App Store</a>
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                I built and programmed ClusterCards, an <span class="primary semibold">iOS business card scanner app</span> that aimed to make scanning business cards instantaneous by using <span class="primary semibold">optical character recognition (OCR)</span> to detect details, such as phone numbers and emails, from business cards automatically. ClusterCards integrated new iOS features such as <span class="primary semibold">Siri Shortcuts, iCloud sync, and dark mode.</span>
+                                <br><br>
+                                I launched and promoted ClusterCards in 2019, receiving over <span class="primary semibold">30,000 downloads</span> and making <span class="primary semibold">HK$20,000</span> ($2,500) in the first year.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="launchcs-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <img class="icon" src="images/launchcs-icon.png" style="border-radius: 20%;">
+                        <div class="text">
+                            <p class="font-sectionTitle heavy">
+                                Launch CS
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2021
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                Working closely with Apple, I founded Launch CS, a brand new <span class="primary semibold">community service initiative</span> that aimed to teach Apple's Swift programming language to <span class="primary semibold">underprivileged students</span> at schools across Hong Kong.
+                                <br><br>
+                                I led a team of likeminded students in <span class="primary semibold">developing our own curriculum</span> for the course, ensuring we made the course both <span class="primary semibold">fun and educational.</span>
+                                <br><br>
+                                <i>Note: Curriculum available <a href="mailto:julian@schiavo.me">on request</a>.</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wwdc-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <img class="icon" src="images/wwdc-icon.jpg" style="border-radius: 20%;">
+                        <div class="text">
+                            <p class="font-sectionTitle heavy">
+                                WWDC Scholarship Winner
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2018, 2019, 2021
+                            </p>
+                            <p class="font-subheadline secondary">
+                                <a href="https://developer.apple.com/wwdc21/swift-student-challenge">Learn more</a>
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                In 2018, 2019, and 2021, I was awarded scholarships to attend <span class="primary semibold">Apple's Worldwide Developers Conference</span> in California (see note below). Every year, Apple awards scholarships to 350 students who are <span class="primary semibold">passionate about coding</span> and apply by creating a unique project, such as a game or educational app.  Winners are <span class="primary semibold">awarded free tickets to attend WWDC, opportunities to connect with Apple developers, and more</span> (see note below).
+                                <br><br>
+                                <i>In 2020 and 2021, due to the impact of the Covid-19 pandemic, WWDC was held online. In these years, the scholarship program has been called the Swift Student Challenge, and offers a similar experience online without travelling to California.</i>
+                                <br><br>
+                                <i>Documentation copy available <a href="mailto:julian@schiavo.me">on request</a>.</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fuze-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <img class="icon" src="images/fuze-icon.png" style="border-radius: 20%;">
+                        <div class="text">
+                            <p class="font-sectionTitle heavy">
+                                Fuze
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2021
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                Fuze is a <span class="primary semibold">social video app</span> I created in SwiftUI built around the concept of <span class="primary semibold">sharing moments of your life</span> with friends. It aimed to redefine traditional social media by <span class="primary semibold">allowing users to train their own recommendation algorithm</span> by swiping left and right on videos.
+                                <br><br>
+                                As part of the app, I developed the <span class="primary semibold">frontend iOS app</span> and a <span class="primary semibold">custom backend server</span> as the sole developer, using technologies including <span class="primary semibold">SwiftUI</span>, <span class="primary semibold">serverless JavaScript</span>, and asynchronous programming through <span class="primary semibold">Apple's Combine framework.</span>
+                                <br><br>
+                                Fuze launched in 2021 and gained over 100 active users in its first week, mainly teenagers in Hong Kong. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cisxideas-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <img class="icon" src="images/cisxideas-logo.png">
+                        <div class="text">
+                            <p class="font-sectionTitle heavy">
+                                CISxIdeas Hackathon
+                            </p>
+                            <p class="font-title2 bold">
+                                Leader, Technology
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2021
+                            </p>
+                            <p class="font-subheadline secondary">
+                                <a href="https://cisxideas.com">Learn more</a>
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                I was invited to lead the technology team at CISxIdeas, an initiative by my school which hosted <span class="primary semibold">the first hackathon for secondary school students</span> in Hong Kong that enables students to <span class="primary semibold">learn directly from industry leaders</span>.
+                                <br><br>
+                                In 2021, we are <span class="primary semibold">partnering with Microsoft, other organisations, and schools in Hong Kong</span> to host our second hackathon, asking students to <span class="primary semibold">focus on solving an educational issue</span> by creating a product.
+                                <br><br>
+                                In my role as leader for technology, I developed our <span class="primary semibold">new <a href="https://cisxideas.com">website</a></span>, containing a beautiful schedule, detailed information, and an integration with <a href="https://ti.to">Tito</a> for registration. I am also leading the <span class="primary semibold">development of internal tools</span> for our team.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kids4kids-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <div class="text">
+                            <img class="icon title" src="images/kids4kids-logo.svg" style="max-width: none; max-height: 70px;">
+                            <p class="font-title2 bold">
+                                Volunteer, Code + Create Team
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2019—2020
+                            </p>
+                            <p class="font-subheadline secondary">
+                                <a href="https://www.kids4kids.org.hk/en/program/code-create">Learn more</a>
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                I volunteered at the Kids4Kids (a local non-governmental organisation) offices in a leadership role, <span class="primary semibold">leading the restructuring and designing of the new Code + Create program and curriculum</span>. The program teaches Computer Science class in community centers and local schools in Hong Kong. The new curriculum is based on Google's CS First classes, and has already been <span class="primary semibold">rolled out across Hong Kong at beneficiary schools.</span>
+                                <br><br>
+                                I also <span class="primary semibold">ran classes</span> for a cohort of Code + Create at Sir Ellis Kadoorie Secondary School in Hong Kong, leading a group of volunteers in <span class="primary semibold">teaching the new curriculum for the first time.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="silentmode-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <div class="text">
+                            <img class="icon title" src="images/silentmode-logo.svg" style="max-width: none; max-height: 70px;">
+                            <p class="font-title2 bold">
+                                Software Engineering Intern
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2020
+                            </p>
+                            <p class="font-subheadline secondary">
+                                <a href="https://silentmode.com">Learn more</a>
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                In the summer following Year 11 (Grade 10), I interned at Silentmode, a Hong Kong-based startup that <span class="primary semibold">builds a meditation and breathing workout app</span>.
+                                <br><br>
+                                I worked under the lead developer to <span class="primary semibold">prototype and develop major features</span> for the Breathonics iOS and watchOS apps, including a <span class="primary semibold">redesigned home feed in SwiftUI</span> and an <span class="primary semibold">update to the Apple Watch app</span> using WatchConnectivity and SwiftUI.
+                                During my internship, I also <span class="primary semibold">collaborated with the Product Lead</span>, participating in sprints and fixing bug reports.
+                            </p>
+                            <br><br>
+                            <i>Contact details for lead developer available <a href="mailto:julian@schiavo.me">on request</a>.</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="inturio-expanded" class="expanded-card">
+                <div class="inner">
+                    <img class="close" src="images/icon-xmark.svg" onclick="closeAllCards()">
+                    <div class="content">
+                        <div class="text">
+                            <p class="font-sectionTitle heavy">
+                                Inturio
+                            </p>
+                            <p class="font-title2 bold">
+                                Freelance Software Engineering
+                            </p>
+                            <p class="font-title3 bold monospaced">
+                                2021
+                            </p>
+                            <br>
+                            <p class="font-subheadline medium secondary">
+                                At the beginning of Year 13 (Grade 12), I worked on a freelance basis with Inturio, a <span class="primary semibold">Hong Kong-based startup</span> that is working on a project related to <span class="primary semibold">medical technology</span>.
+                                <br><br>
+                                As part of my work with them, I created a <span class="primary semibold">prototype app</span> for the startup as the sole developer. Technologies used included Apple's <span class="primary semibold">ResearchKit, SwiftUI, and virtual reality graphics technologies.</span>
+                            </p>
+                            <br><br>
+                            <i>More information and contact details for founder available <a href="mailto:julian@schiavo.me">on request</a>.</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer style="border-top: none; background-color: initial">
+            <div class="wrapper font-caption" style="padding-top: 0px; padding-bottom: 20px; width: initial; max-width: none;">
+                <div class="social-icons">
+                    <a class="social-icon" href="mailto:julian@schiavo.me"><i class="fas fa-envelope"></i></a>
+                    <a class="social-icon" href="https://instagram.com/julianschiavo"><i class="fab fa-instagram"></i></a>
+                    <a class="social-icon" href="https://github.com/julianschiavo"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.snapchat.com/add/julianschiavo?share_id=MUIxQjg0&locale=en_US"><i class="fab fa-snapchat-ghost"></i></a>
+                    <a class="social-icon" href="https://twitter.com/_julianschiavo"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>
+                    © 2021 Julian Schiavo. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

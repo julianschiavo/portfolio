@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>AppleCard</title>
+    <defs>
+        <linearGradient x1="74.1684385%" y1="1.2158197%" x2="56.5459045%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#C7C1AE" offset="0%"></stop>
+            <stop stop-color="#C4894A" offset="20.0557255%"></stop>
+            <stop stop-color="#C08D2E" offset="40.472028%"></stop>
+            <stop stop-color="#BE552D" offset="62.8715035%"></stop>
+            <stop stop-color="#8861AC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="AppleCard" fill="url(#linearGradient-1)" x="0" y="0" width="512" height="512"></rect>
+    </g>
+</svg>
