@@ -133,11 +133,13 @@
     .card-list {
         gap: 5px;
     }
-    .title {
-        width: 90%;
+    .page-content .title {
+        width: 100%;
+        max-width: 100%;
     }
-    .subtitle {
-        width: 80%;
+    .page-content .subtitle {
+        width: 90%;
+        max-width: 90%;
     }
     .card {
         display: block;
