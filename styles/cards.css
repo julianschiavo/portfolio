@@ -377,7 +377,7 @@
 
 .card.blog {
     background-color: initial;
-    background-image: linear-gradient(90deg, #140e00, #120c00, #100a00, #0d0800, #0a0600, #070400, #030200, #000000);
+    background-image: linear-gradient(90deg, #0b1b25, #0b1a23, #0b1921, #0a1720, #0a161e, #09151c, #08131b, #071219);
 }
 
 .card.blog:hover {
@@ -513,7 +513,7 @@
     max-width: 80%;
 }
 
-.expanded-card#kids4kids-expanded .inner {
+.expanded-card#silentmode-expanded .inner {
     background-image: linear-gradient(90deg, #092225, #091f21, #091c1e, #08191a, #061617, #041213, #020e0e, #000909);
 }
 
