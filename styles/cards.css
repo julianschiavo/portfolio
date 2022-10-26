@@ -570,6 +570,11 @@
     /* Supported in Chrome 76 */
 }
 
+.card.inturio img {
+    margin: auto;
+    width: 80%;
+}
+
 /* Inturio */
 
 .card.kids4kids {
